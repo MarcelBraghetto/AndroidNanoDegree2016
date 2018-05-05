@@ -1,0 +1,62 @@
+<resources
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:targetApi="jelly_bean_mr1">
+
+    <dimen name="navigation_padding_top">0dp</dimen>
+
+    <style name="BaseAppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryDark">@color/primary_dark</item>
+        <item name="colorAccent">@color/accent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowBackground">@color/primary_dark</item>
+    </style>
+
+    <style name="AppTheme" parent="BaseAppTheme">
+        <!-- Nothing here by default - API21 overrides -->
+    </style>
+
+    <style name="AppThemeFloating" parent="AppTheme">
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowCloseOnTouchOutside" tools:targetApi="honeycomb">true</item>
+        <item name="android:windowBackground">@color/transparent</item>
+    </style>
+
+    <style name="AppLargeText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/large_text_size</item>
+        <item name="android:textColor">@color/primary_text</item>
+    </style>
+
+    <style name="AppMediumText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/medium_text_size</item>
+        <item name="android:textColor">@color/primary_text</item>
+    </style>
+
+    <style name="AppToolbarTitleText" parent="@style/TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:layout_marginLeft">0dp</item>
+        <item name="android:layout_marginStart">0dp</item>
+    </style>
+
+    <style name="AppToolbar">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">?attr/actionBarSize</item>
+        <item name="popupTheme">@style/ThemeOverlay.AppCompat.Light</item>
+        <item name="theme">@style/ThemeOverlay.AppCompat</item>
+        <item name="layout_scrollFlags">scroll|enterAlways</item>
+    </style>
+
+    <style name="AppBarLayout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:theme">@style/ThemeOverlay.AppCompat.Dark.ActionBar</item>
+    </style>
+</resources>

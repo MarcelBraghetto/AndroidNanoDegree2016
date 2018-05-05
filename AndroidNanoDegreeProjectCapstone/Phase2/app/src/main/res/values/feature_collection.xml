@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="collection_url">http://backend.deviantart.com/rss.xml?q=special%3Add</string>
+    <string name="collection_action_favourites">My Deviations</string>
+    <string name="collection_action_toggle_mode">Toggle mode</string>
+    <string name="collection_data_load_success">Refresh complete</string>
+    <string name="collection_data_load_failed">Connection problem - refresh failed</string>
+    <string name="collection_favourite_added">Added: %1$s</string>
+    <string name="collection_favourite_removed">Removed: %1$s</string>
+    <string name="collection_empty_daily_deviations">Check your connection then swipe to refresh.</string>
+    <string name="collection_empty_favourites">Tap the heart on an image to add to your collection.</string>
+
+    <integer name="collection_num_columns">2</integer>
+</resources>

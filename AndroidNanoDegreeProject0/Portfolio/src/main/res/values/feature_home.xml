@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Strings -->
+    <string name="home_content_title">My Nanodegree Apps!</string>
+
+    <string name="home_button_toast_prefix">This button will launch my %1$s</string>
+
+    <string name="home_spotify_streamer_button">Spotify Streamer</string>
+    <string name="home_spotify_streamer_toast_suffix">Spotify streamer app!</string>
+
+    <string name="home_super_duo_scores_button">Scores App</string>
+    <string name="home_super_duo_scores_toast_suffix">scores app!</string>
+
+    <string name="home_super_duo_library_button">Library App</string>
+    <string name="home_super_duo_library_toast_suffix">library app!</string>
+
+    <string name="home_build_it_bigger_button">Build It Bigger</string>
+    <string name="home_build_it_bigger_toast_suffix">\'Build It Bigger\' app!</string>
+
+    <string name="home_xyz_reader_button">XYZ Reader</string>
+    <string name="home_xyz_reader_toast_suffix">\'XYZ Reader\' app!</string>
+
+    <string name="home_capstone_button">Capstone</string>
+    <string name="home_capstone_toast_suffix">capstone app!</string>
+
+    <!-- Styles -->
+    <style name="home_root_container">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="home_button_container">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:paddingRight">16dp</item>
+        <item name="android:paddingBottom">16dp</item>
+    </style>
+
+    <style name="home_content_title">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:layout_margin">24dp</item>
+        <item name="android:textColor">#fff</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:text">@string/home_content_title</item>
+    </style>
+
+    <style name="home_button_base">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:layout_margin">4dp</item>
+    </style>
+
+    <style name="home_button_default" parent="home_button_base">
+        <item name="android:background">@drawable/home_button_background_default</item>
+        <item name="android:textColor">@color/home_button_label_default</item>
+    </style>
+
+    <style name="home_button_important" parent="home_button_base">
+        <item name="android:background">@drawable/home_button_background_important</item>
+        <item name="android:textColor">@color/home_button_label_important</item>
+    </style>
+
+    <!-- Colours -->
+    <color name="home_button_label_default">#666</color>
+    <color name="home_button_default_on">#ddE1F5FE</color>
+    <color name="home_button_default_off">#E1F5FE</color>
+
+    <color name="home_button_label_important">#fff</color>
+    <color name="home_button_important_on">#ddF44336</color>
+    <color name="home_button_important_off">#F44336</color>
+
+</resources>

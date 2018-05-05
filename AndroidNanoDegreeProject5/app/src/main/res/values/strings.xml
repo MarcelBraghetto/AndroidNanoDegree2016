@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Daily Deviations</string>
+
+    <string name="ok">OK</string>
+
+    <!-- Navigation Menu -->
+    <string name="home_nav_header_title">@string/app_name</string>
+
+    <string name="monday">Monday</string>
+    <string name="tuesday">Tuesday</string>
+    <string name="wednesday">Wednesday</string>
+    <string name="thursday">Thursday</string>
+    <string name="friday">Friday</string>
+    <string name="saturday">Saturday</string>
+    <string name="sunday">Sunday</string>
+
+    <string name="artwork_transition_name">artwork_transition_name</string>
+</resources>

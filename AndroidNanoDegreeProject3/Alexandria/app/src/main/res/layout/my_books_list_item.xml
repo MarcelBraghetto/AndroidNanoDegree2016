@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="4dp"
+    android:paddingBottom="4dp"
+    >
+
+    <android.support.v7.widget.CardView
+        style="@style/AppCardView"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="16dp"
+            >
+
+            <RelativeLayout
+                android:id="@+id/my_books_list_item_icon_container"
+                android:layout_width="@dimen/my_books_list_item_thumbnail_width"
+                android:layout_height="@dimen/my_books_list_item_thumbnail_height"
+                android:layout_marginRight="16dp"
+                android:layout_marginEnd="16dp"
+                android:padding="1dp"
+                android:background="@drawable/thumbnail_container_background"
+                >
+
+                <ImageView
+                    android:id="@+id/my_books_list_item_icon"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitCenter"
+                    android:contentDescription="@string/book_details_thumbnail_description"
+                    />
+
+                <FrameLayout
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:background="#80000000"
+                    >
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/icon_search"
+                        android:contentDescription="@null"
+                        />
+                </FrameLayout>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+
+                <TextView
+                    android:id="@+id/my_books_list_item_title"
+                    style="@style/AppLargeText"
+                    android:textStyle="bold"
+                    android:layout_marginRight="24dp"
+                    android:layout_marginEnd="24dp"
+                    />
+
+                <TextView
+                    android:id="@+id/my_books_list_item_authors"
+                    style="@style/AppMediumText"
+                    android:layout_marginTop="8dp"
+                    />
+
+                <TextView
+                    android:id="@+id/my_books_list_item_hint"
+                    style="@style/AppMediumText"
+                    android:textColor="@color/secondary_text"
+                    android:layout_marginTop="8dp"
+                    />
+
+                <LinearLayout
+                    android:id="@+id/my_books_list_item_details"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="8dp"
+                    >
+
+                    <android.support.v7.widget.GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:columnCount="2"
+                        app:alignmentMode="alignBounds"
+                        >
+
+                        <TextView
+                            style="@style/BookDetailsLabelText"
+                            android:text="@string/book_details_published_label"
+                            />
+
+                        <TextView
+                            android:id="@+id/my_books_list_item_published"
+                            style="@style/BookDetailsGridText"
+                            />
+
+                        <TextView
+                            style="@style/BookDetailsLabelText"
+                            android:text="@string/book_details_categories_label"
+                            />
+
+                        <TextView
+                            android:id="@+id/my_books_list_item_categories"
+                            style="@style/BookDetailsGridText"
+                            />
+
+                    </android.support.v7.widget.GridLayout>
+
+                    <TextView
+                        android:id="@+id/my_books_list_item_description"
+                        style="@style/AppMediumText"
+                        android:layout_marginTop="8dp"
+                        />
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/my_books_list_item_toolbar"
+            android:layout_width="wrap_content"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            />
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+</FrameLayout>

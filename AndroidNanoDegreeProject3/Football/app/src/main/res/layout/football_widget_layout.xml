@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:id="@+id/football_widget_header_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/primary"
+        android:orientation="horizontal"
+        >
+
+        <ImageView
+            android:src="@drawable/app_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="6dp"
+            android:scaleType="fitCenter"
+            />
+
+        <TextView
+            style="@style/AppLargeText"
+            android:text="@string/app_name"
+            android:layout_gravity="center_vertical"
+            android:textColor="#fff"
+            android:textStyle="bold"
+            />
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/primary_light"
+        >
+
+        <ListView
+            android:id="@+id/football_scores_list_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:clipToPadding="false"
+            android:divider="@null"
+            android:dividerHeight="0dp"
+            />
+
+        <TextView
+            android:id="@+id/football_scores_empty_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:visibility="gone"
+            android:textColor="#ffffff"
+            android:text="EMPTY VIEW"
+            android:textSize="20sp"
+            />
+    </FrameLayout>
+</LinearLayout>

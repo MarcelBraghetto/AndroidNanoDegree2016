@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="app_primary_colour">#FF5722</color>
+    <color name="app_primary_colour_dark">#FF5722</color>
+    <color name="app_accent_colour">#FBE9E7</color>
+
+    <color name="dark_background">#333</color>
+    <color name="full_black">#000</color>
+    <color name="full_white">#fff</color>
+    <color name="medium_gray">#666</color>
+    <color name="light_gray">#999</color>
+    <color name="translucent_gray">#20000000</color>
+    <color name="clear_button_text">#0099FF</color>
+</resources>

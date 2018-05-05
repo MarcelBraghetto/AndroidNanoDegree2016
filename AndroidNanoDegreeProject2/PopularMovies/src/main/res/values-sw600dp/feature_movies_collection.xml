@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Dimensions -->
+    <dimen name="movies_collection_item_poster_width">185dp</dimen> <!-- Original image source is 185px wide -->
+    <dimen name="movies_collection_item_poster_height">277dp</dimen> <!-- Original image source is 277px high -->
+</resources>

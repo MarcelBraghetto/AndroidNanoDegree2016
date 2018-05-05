@@ -1,0 +1,17 @@
+App author: Marcel Braghetto
+
+This app was developed as part of the 2015 Udacity Android Nanodegree program.
+
+The assignment was to take an existing project (named Alexandria, I assume for the ancient Egyptian library?) and make it 'production ready'.
+
+I redeveloped the app from the ground up (I wasn't happy with some of the code in the sample app). Because I decided to start again from scratch, I named the app Alexandria Redux as it was 'born again'.
+
+In particular this app has an interesting feature - the ability to scan barcodes using the Google Vision APIs (part of Google Play Services).
+
+A device will only have the option to scan if it has a back camera and is running Android 4 or later.
+
+The Google Books API can sometimes be a bit flaky and in particular I found a very strange behaviour where putting a query string parameter named 'isbn:' functioned completely differently than a parameter named 'ISBN:' (note the only difference is the upper/lower case).
+
+No idea what's going on with that, but unless I used the upper case 'ISBN:', the APIs didn't work for me...
+
+Overall it was a pretty cool app to work on, I got to try out a bunch of stuff that I enjoyed.

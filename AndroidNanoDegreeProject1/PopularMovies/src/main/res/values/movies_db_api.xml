@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--
+    You will need to obtain your own Movies DB API key to run this
+    project. Obtain your API key from:
+
+    https://www.themoviedb.org/
+
+    Then replace the string resource below with your API key.
+    -->
+    <string name="movies_db_api_key">PUT YOUR MOVIES DB API KEY HERE</string>
+</resources>

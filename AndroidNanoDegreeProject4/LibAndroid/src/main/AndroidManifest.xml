@@ -1,0 +1,22 @@
+<manifest package="io.github.marcelbraghetto.jokemachine.lib.android"
+          xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+    <application
+        android:allowBackup="true"
+        android:supportsRtl="true"
+        android:name=".MainApplication"
+        >
+
+        <activity
+            android:name=".features.displayjoke.DisplayJokeActivity"
+            android:theme="@style/AppTheme.Floating"
+            android:screenOrientation="portrait"
+            />
+
+        <activity
+            android:name=".features.settings.SettingsActivity"
+            />
+    </application>
+
+</manifest>

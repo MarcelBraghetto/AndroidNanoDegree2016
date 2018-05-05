@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <!--
+    We need to wrap the tab layout because of the
+    design lib bug with the 'scrollable' attribute
+    enabled where it won't fill the width if the
+    device is wider than all the tabs.
+    -->
+    <FrameLayout
+        android:id="@+id/scores_host_tab_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/primary"
+        >
+        <android.support.design.widget.TabLayout
+            android:id="@+id/scores_host_tab_layout"
+            style="@style/AppTabLayout"
+            />
+    </FrameLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/scores_host_view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/scores_host_tab_container"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        />
+
+</RelativeLayout>

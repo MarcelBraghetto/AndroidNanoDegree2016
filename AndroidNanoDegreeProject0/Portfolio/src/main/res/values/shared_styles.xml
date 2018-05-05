@@ -1,0 +1,8 @@
+<resources>
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/app_primary_colour</item>
+        <item name="colorPrimaryDark">@color/app_primary_colour_dark</item>
+        <item name="colorAccent">@color/app_accent_colour</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+</resources>

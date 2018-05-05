@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_notification_title">New deviations</string>
+
+    <!--
+    %1$s = number of new deviations.
+    -->
+    <string name="app_notification_message">%1$s new deviations to see! Tap to view.</string>
+</resources>

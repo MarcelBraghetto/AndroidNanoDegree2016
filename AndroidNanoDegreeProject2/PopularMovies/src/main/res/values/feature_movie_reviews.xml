@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Strings -->
+    <string name="movie_reviews_title">User reviews</string>
+    <string name="movie_reviews_close">Close</string>
+
+    <!-- Styles -->
+    <style name="movie_reviews_activity_theme_base" parent="app_theme" />
+
+    <!--
+    This theme is applied to the details activity by default however it
+    gets overridden for smallest width 600 to behave as more of a modal
+    translucent overlay window.
+    -->
+    <style name="movie_reviews_activity_theme" parent="movie_reviews_activity_theme_base" />
+
+    <!-- Dimensions -->
+    <!--
+    These properties determine the window size on large devices
+    but they also get overridden in the landscape mode
+    -->
+    <dimen name="movie_reviews_floating_window_width">500dp</dimen>
+    <dimen name="movie_reviews_floating_window_height">700dp</dimen>
+
+</resources>

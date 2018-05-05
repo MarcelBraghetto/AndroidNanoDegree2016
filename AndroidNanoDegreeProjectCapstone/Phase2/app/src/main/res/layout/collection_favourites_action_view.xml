@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="viewModel"
+            type="io.github.marcelbraghetto.dailydeviations.features.collection.ui.CollectionFavouritesActionView"
+            />
+    </data>
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/favourites_button"
+        android:layout_width="44dp"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        app:onClickListener="@{() -> viewModel.handleButtonClick()}"
+        >
+
+        <ImageView
+            android:id="@+id/favourites_icon_favourites"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_favourite_mono"
+            android:layout_centerInParent="true"
+            />
+
+        <ImageView
+            android:id="@+id/favourites_icon_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_home"
+            android:layout_centerInParent="true"
+            />
+
+    </RelativeLayout>
+</layout>

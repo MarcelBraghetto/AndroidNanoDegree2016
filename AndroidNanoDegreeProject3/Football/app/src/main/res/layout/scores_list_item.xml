@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="4dp"
+    android:paddingBottom="4dp"
+    >
+
+    <android.support.v7.widget.CardView
+        style="@style/AppCardView"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="80dp"
+            >
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/scores_list_item_toolbar"
+                android:layout_width="wrap_content"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_centerVertical="true"
+                android:padding="8dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginEnd="20dp"
+                >
+
+                <RelativeLayout
+                    style="@style/ScoresListItemTeamNameContainer"
+                    >
+                    <TextView
+                        android:id="@+id/scores_list_item_title_home"
+                        style="@style/ScoresListItemTeamName"
+                        />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    >
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="#50cccccc"
+                        />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:orientation="vertical"
+                        >
+
+                        <TextView
+                            android:id="@+id/scores_list_item_score"
+                            style="@style/AppLargeText"
+                            android:layout_gravity="center"
+                            android:textStyle="bold"
+                            />
+
+                        <TextView
+                            android:id="@+id/scores_list_item_time"
+                            style="@style/AppMediumText"
+                            android:textColor="@color/secondary_text"
+                            android:layout_gravity="center"
+                            />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="#50cccccc"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true"
+                        />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    style="@style/ScoresListItemTeamNameContainer"
+                    >
+                    <TextView
+                        android:id="@+id/scores_list_item_title_away"
+                        style="@style/ScoresListItemTeamName"
+                        />
+                </RelativeLayout>
+
+            </LinearLayout>
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+</FrameLayout>

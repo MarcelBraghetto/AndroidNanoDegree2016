@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/movie_details_root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/full_white"
+    >
+
+    <android.support.design.widget.AppBarLayout
+        style="@style/movie_details_app_bar"
+        >
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/movie_details_collapsing_toolbar_layout"
+            style="@style/movie_details_toolbar_layout"
+            >
+
+            <RelativeLayout
+                style="@style/movie_details_header_layout"
+                >
+
+                <ProgressBar
+                    android:id="@+id/movie_details_header_progress_indicator"
+                    style="@style/movie_details_header_progress_indicator"
+                    />
+
+                <ImageView
+                    android:id="@+id/movie_details_header_image_failed_icon"
+                    style="@style/movie_details_header_image_load_failed_icon"
+                    android:contentDescription="@string/movie_details_header_image_load_failed_icon_content_description"
+                    />
+
+                <ImageView
+                    android:id="@+id/movie_details_header_image"
+                    style="@style/movie_details_header_image"
+                    android:contentDescription="@string/movie_details_header_image_content_description"
+                    />
+
+                <ImageView
+                    style="@style/movie_details_header_scrim"
+                    android:contentDescription="@string/movie_details_header_scrim_content_description"
+                    />
+
+                <LinearLayout
+                    android:id="@+id/movie_details_vote_container"
+                    style="@style/movie_details_vote_container"
+                    >
+
+                    <TextView
+                        android:id="@+id/movie_details_vote_average_text"
+                        style="@style/movie_details_vote_average_text"
+                        />
+
+                    <TextView
+                        android:id="@+id/movie_details_vote_total_text"
+                        style="@style/movie_details_vote_total_text"
+                        />
+
+                </LinearLayout>
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/movie_details_header_video_button"
+                    style="@style/movie_details_video_play_button"
+                    />
+
+            </RelativeLayout>
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/movie_details_toolbar"
+                style="@style/movie_details_toolbar"
+                />
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        style="@style/movie_details_content_scrollview"
+        >
+
+        <LinearLayout
+            style="@style/movie_details_content_container"
+            >
+
+            <TextView
+                style="@style/movie_details_section_heading"
+                android:text="@string/movie_details_about_heading"
+                />
+
+            <TextView
+                android:id="@+id/movie_details_about_text"
+                style="@style/movie_details_content_text"
+                android:layout_marginTop="10dp"
+                />
+
+            <!-- Videos -->
+            <LinearLayout
+                android:id="@+id/movie_details_videos_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="16dp"
+                >
+
+                <TextView
+                    android:id="@+id/movie_details_videos_heading"
+                    style="@style/movie_details_section_heading"
+                    android:text="@string/movie_details_videos_heading"
+                    />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
+                    android:background="#ddd"
+                    android:layout_marginTop="16dp"
+                    >
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/movie_details_videos_recycler_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        />
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+            <!-- Reviews -->
+            <LinearLayout
+                android:id="@+id/movie_details_reviews_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="16dp"
+                >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/movie_details_reviews_more_button"
+                        style="@style/movie_details_review_more_button"
+                        />
+
+                    <TextView
+                        android:id="@+id/movie_details_reviews_heading"
+                        style="@style/movie_details_section_heading"
+                        android:layout_width="match_parent"
+                        android:text="@string/movie_details_reviews_heading"
+                        android:layout_toLeftOf="@id/movie_details_reviews_more_button"
+                        android:layout_alignWithParentIfMissing="true"
+                        />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/movie_details_review1_container"
+                    style="@style/movie_details_review_container"
+                    >
+
+                    <View style="@style/movie_details_review_separator" />
+
+                    <TextView
+                        android:id="@+id/movie_details_review1_author"
+                        style="@style/movie_reviews_author_text"
+                        />
+
+                    <TextView
+                        android:id="@+id/movie_details_review1_content"
+                        style="@style/movie_reviews_content_text"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/movie_details_review2_container"
+                    style="@style/movie_details_review_container"
+                    >
+
+                    <View style="@style/movie_details_review_separator" />
+
+                    <TextView
+                        android:id="@+id/movie_details_review2_author"
+                        style="@style/movie_reviews_author_text"
+                        />
+
+                    <TextView
+                        android:id="@+id/movie_details_review2_content"
+                        style="@style/movie_reviews_content_text"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/movie_details_review3_container"
+                    style="@style/movie_details_review_container"
+                    >
+
+                    <View style="@style/movie_details_review_separator" />
+
+                    <TextView
+                        android:id="@+id/movie_details_review3_author"
+                        style="@style/movie_reviews_author_text"
+                        />
+
+                    <TextView
+                        android:id="@+id/movie_details_review3_content"
+                        style="@style/movie_reviews_content_text"
+                        />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                />
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/movie_details_floating_action_button"
+        style="@style/movie_details_floating_action_button"
+        />
+
+</android.support.design.widget.CoordinatorLayout>

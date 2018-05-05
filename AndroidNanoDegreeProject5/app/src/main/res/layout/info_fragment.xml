@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/info_rootview"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+<android.support.v7.widget.CardView
+    android:id="@+id/info_cardview"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true"
+    app:cardElevation="3dp"
+    app:cardCornerRadius="4dp"
+    app:contentPadding="0dp"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@color/primary"
+                android:padding="12dp"
+                >
+
+                <ImageView
+                    android:id="@+id/info_author_image"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginEnd="12dp"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+                    <TextView
+                        android:id="@+id/info_title"
+                        style="@style/AppLargeText"
+                        android:textStyle="bold"
+                        android:textColor="#fff"
+                        />
+
+                    <TextView
+                        android:id="@+id/info_author_text"
+                        style="@style/AppMediumText"
+                        android:textColor="#fff"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+
+            <WebView
+                android:id="@+id/info_description_webview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbarStyle="insideOverlay"
+                android:scrollbars="none"
+                android:isScrollContainer="false"
+                tools:ignore="WebViewLayout"
+                />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</android.support.v7.widget.CardView>
+</RelativeLayout>

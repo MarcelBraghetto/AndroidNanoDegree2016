@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="viewModel"
+            type="io.github.marcelbraghetto.dailydeviations.features.settings.logic.SettingsViewModel"
+            />
+    </data>
+
+    <android.support.v4.widget.NestedScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/primary_dark"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp"
+            >
+
+            <CheckedTextView
+                style="@style/SettingsOption"
+                android:text="@string/settings_option_background_data"
+                android:checked="@{ viewModel.glue.backgroundDataEnabled }"
+                app:onClickListener="@{ () -> viewModel.toggleBackgroundData() }"
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="16dp"
+                />
+
+            <CheckedTextView
+                style="@style/SettingsOption"
+                android:text="@string/settings_option_notifications"
+                android:checked="@{ viewModel.glue.notificationsEnabled }"
+                app:onClickListener="@{ () -> viewModel.toggleNotifications() }"
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="16dp"
+                />
+
+            <CheckedTextView
+                style="@style/SettingsOption"
+                android:text="@string/settings_option_header_image"
+                android:checked="@{ viewModel.glue.automaticHeaderImageEnabled }"
+                app:onClickListener="@{ () -> viewModel.toggleAutomaticHeaderImage() }"
+                />
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</layout>

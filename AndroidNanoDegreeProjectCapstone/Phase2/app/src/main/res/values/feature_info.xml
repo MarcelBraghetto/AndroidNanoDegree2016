@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--
+    %1$s = author name
+    %2$s = date string
+    -->
+    <string name="info_author">By %1$s\n%2$s</string>
+    <string name="info_no_description">The author has not provided an image description.</string>
+
+    <dimen name="info_window_max_width">500dp</dimen>
+</resources>

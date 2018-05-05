@@ -1,0 +1,60 @@
+<resources>
+    <string name="app_name">Alexandria Redux</string>
+
+    <string name="ok">OK</string>
+
+    <!-- Navigation Menu -->
+    <string name="home_nav_header_title">@string/app_name</string>
+    <string name="home_nav_drawer_open">Open navigation drawer</string>
+    <string name="home_nav_drawer_close">Close navigation drawer</string>
+    <string name="home_nav_menu_my_books">My Books</string>
+    <string name="home_nav_menu_add_book">Add a Book</string>
+    <string name="home_nav_menu_about">About this App</string>
+    <string name="home_nav_menu_settings">Settings</string>
+
+    <!-- My Books -->
+    <string name="my_books_screen_title">My Books</string>
+    <string name="my_books_search">Search</string>
+    <string name="my_books_list_item_more">Tap for more ...</string>
+    <string name="my_books_list_item_less">Tap for less ...</string>
+    <string name="my_books_list_item_remove">Remove book</string>
+    <string name="my_books_list_item_share">Share book</string>
+    <string name="my_books_list_item_view_in_browser">View in browser</string>
+    <string name="my_books_no_results">There are no books to display.</string>
+
+    <!-- Add Book -->
+    <string name="add_book_screen_title">Add Book</string>
+    <string name="add_book_instructions">Adding a book to your collection is easy. If you have a device with a camera, you can scan the ISBN barcode on the book or you can type the ISBN into the field below.</string>
+    <string name="add_book_scan_button">Tap to scan barcode</string>
+    <string name="add_book_isbn_label">ISBN: 978</string>
+    <string name="add_book_status_searching">Searching ...</string>
+    <string name="add_book_status_no_result">No book could be found with that ISBN</string>
+    <string name="add_book_status_connection_error">Check your internet connection</string>
+    <string name="add_book_status_server_error">Search temporarily unavailable</string>
+    <string name="add_book_added">Added \'%1$s\'</string>
+    <string name="add_book_removed">Removed \'%1$s\'</string>
+    <string name="add_book_scan_invalid_isbn">Invalid ISBN. Make sure the bar code starts with 978 and is 13 digits long.</string>
+
+    <!-- About -->
+    <string name="about_screen_title">About this app</string>
+
+    <!-- Book Details -->
+    <string name="book_details_screen_title">Book Details</string>
+    <string name="book_details_thumbnail_description">Book thumbnail image</string>
+    <string name="book_details_add_button">Add</string>
+    <string name="book_details_remove_button">Remove</string>
+    <string name="book_details_authors_label">Authors</string>
+    <string name="book_details_categories_label">Categories</string>
+    <string name="book_details_published_label">Published</string>
+
+    <!-- Thumbnail viewer -->
+    <string name="thumbnail_viewer_status_loading">Loading image ...</string>
+    <string name="thumbnail_viewer_status_failed">Unable to load image</string>
+
+    <!-- Scanner -->
+    <string name="scanner_instructions">Point your camera at the barcode on the book to scan the ISBN.</string>
+    <string name="scanner_device_storage_low">Device storage too low to use barcode scanning.</string>
+    <string name="scanner_enable_permissions_title">Missing camera permission</string>
+    <string name="scanner_enable_permissions_message">You need to enable camera permissions.</string>
+
+</resources>

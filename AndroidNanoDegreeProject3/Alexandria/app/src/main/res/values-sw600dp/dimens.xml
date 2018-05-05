@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="large_text_size">20sp</dimen>
+
+    <!-- My Books: Some of these properties are overridden in larger screen sizes -->
+    <dimen name="my_books_list_item_thumbnail_width">70dp</dimen>
+    <dimen name="my_books_list_item_thumbnail_height">112dp</dimen>
+
+</resources>

@@ -1,0 +1,17 @@
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:1.2.3'
+
+        // APT processor plugin (to help Dagger): https://bitbucket.org/hvisser/android-apt
+        classpath 'com.neenbedankt.gradle.plugins:android-apt:1.5.1'
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+    }
+}

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    package="io.github.marcelbraghetto.dailydeviations"
+    >
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.SET_WALLPAPER"/>
+
+    <application
+        android:name="io.github.marcelbraghetto.dailydeviations.features.application.MainApp"
+        android:allowBackup="true"
+        android:icon="@drawable/app_icon"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:largeHeap="true"
+        >
+
+        <meta-data
+            android:name="io.github.marcelbraghetto.dailydeviations.framework.foundation.glide.AppGlideModule"
+            android:value="GlideModule"
+            />
+
+        <activity
+            android:name="io.github.marcelbraghetto.dailydeviations.features.home.ui.HomeActivity"
+            android:label="@string/app_name"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="io.github.marcelbraghetto.dailydeviations.features.detail.ui.DetailActivity"
+            />
+
+        <activity
+            android:name="io.github.marcelbraghetto.dailydeviations.features.info.ui.InfoActivity"
+            android:theme="@style/AppThemeFloating"
+            />
+
+        <!-- Register to be notified if the device has booted up again or if the network changes -->
+        <receiver
+            android:name="io.github.marcelbraghetto.dailydeviations.features.application.receivers.DataRefreshBroadcastReceiver"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+        <!-- Register to be notified when any of our alarms have triggered -->
+        <receiver
+            android:name="io.github.marcelbraghetto.dailydeviations.features.application.receivers.AlarmBroadcastReceiver"
+            />
+
+        <!-- Database provider used as the data source throughout the app -->
+        <provider
+            android:name="io.github.marcelbraghetto.dailydeviations.framework.artworks.content.ArtworksContentProvider"
+            android:authorities="io.github.marcelbraghetto.dailydeviations.framework.artworks.content.ArtworksContentProvider"
+            android:exported="false"
+            />
+
+        <!-- Our worker service responsible for fetching data to update the artworks -->
+        <service
+            android:name="io.github.marcelbraghetto.dailydeviations.framework.artworks.service.ArtworksDataService"
+            android:exported="false"
+            />
+
+        <!-- Worker service use to set the device wallpaper to an image -->
+        <service
+            android:name=".features.wallpaper.services.SetWallpaperIntentService"
+            android:exported="false"
+            />
+
+        <!-- Home screen widget -->
+        <receiver
+            android:name=".features.widget.HomeWidgetProvider"
+            >
+
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="io.github.marcelbraghetto.dailydeviations.features.widget.UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/home_widget_info"
+                />
+        </receiver>
+
+        <!-- Our Android widget service -->
+        <service
+            android:name=".features.widget.HomeWidgetService"
+            android:permission="android.permission.BIND_REMOTEVIEWS"
+            android:exported="false"
+            />
+
+    </application>
+
+</manifest>

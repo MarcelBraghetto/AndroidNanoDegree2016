@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Strings -->
+    <string name="movie_details_vote_average">%1$d%%</string>
+    <string name="movie_details_vote_total">%1$d votes</string>
+
+    <string name="movie_details_about_heading">About</string>
+    <string name="movie_details_videos_heading">Videos</string>
+    <string name="movie_details_reviews_heading">User reviews</string>
+
+    <string name="movie_details_release_date">%1$s was released on %2$s.</string>
+
+    <string name="movie_details_share_title">%1$s - %2$s</string>
+
+    <string name="movie_details_header_image_load_failed_icon_content_description">Image failed to load.</string>
+    <string name="movie_details_header_image_content_description">Movie image.</string>
+    <string name="movie_details_header_scrim_content_description">Movie image scrim.</string>
+
+    <string name="movie_details_review_more_button">Show all</string>
+
+    <!-- Styles -->
+    <style name="movie_details_app_bar">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/movie_details_app_bar_height</item>
+        <item name="android:theme">@style/ThemeOverlay.AppCompat.Dark.ActionBar</item>
+    </style>
+
+    <style name="movie_details_toolbar_layout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="contentScrim">@color/movie_details_toolbar_scrim_colour</item>
+        <item name="layout_scrollFlags">scroll|exitUntilCollapsed</item>
+        <item name="popupTheme">@style/ThemeOverlay.AppCompat.Light</item>
+        <item name="theme">@style/ThemeOverlay.AppCompat.Dark.ActionBar</item>
+    </style>
+
+    <style name="movie_details_header_layout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/dark_background</item>
+        <item name="layout_collapseMode">parallax</item>
+        <item name="layout_collapseParallaxMultiplier">0.5</item>
+    </style>
+
+    <style name="movie_details_video_play_button">
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:src">@drawable/icon_play_arrow</item>
+        <item name="backgroundTint">#88000000</item>
+        <item name="borderWidth">0dp</item>
+        <item name="fabSize">normal</item>
+    </style>
+
+    <style name="movie_details_header_progress_indicator">
+        <item name="android:layout_width">32dp</item>
+        <item name="android:layout_height">32dp</item>
+        <item name="android:indeterminate">true</item>
+        <item name="android:layout_centerInParent">true</item>
+    </style>
+
+    <style name="movie_details_header_image_load_failed_icon">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:src">@drawable/icon_image_load_failed</item>
+        <item name="android:layout_centerInParent">true</item>
+    </style>
+
+    <style name="movie_details_header_image">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:scaleType">centerCrop</item>
+    </style>
+
+    <style name="movie_details_header_scrim">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">?attr/actionBarSize</item>
+        <item name="android:src">@drawable/movie_details_header_image_scrim</item>
+        <item name="android:layout_alignParentBottom">true</item>
+    </style>
+
+    <style name="movie_details_toolbar">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">?attr/actionBarSize</item>
+        <item name="layout_collapseMode">pin</item>
+        <item name="popupTheme">@style/ThemeOverlay.AppCompat.Light</item>
+        <item name="theme">@style/ThemeOverlay.AppCompat.Dark.ActionBar</item>
+    </style>
+
+    <style name="movie_details_content_scrollview">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_gravity">fill_vertical</item>
+        <item name="layout_behavior">@string/appbar_scrolling_view_behavior</item>
+    </style>
+
+    <style name="movie_details_content_container">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">16dp</item>
+    </style>
+
+    <style name="movie_details_floating_action_button">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">bottom|right</item>
+        <item name="android:layout_marginBottom">@dimen/fab_margin_bottom</item>
+        <item name="android:layout_marginRight">@dimen/fab_margin_right</item>
+        <item name="android:src">@drawable/star_fab_off</item>
+        <item name="backgroundTint">@color/app_primary_colour</item>
+        <item name="borderWidth">0dp</item>
+        <item name="fabSize">normal</item>
+    </style>
+
+    <style name="movie_details_vote_container">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginRight">8dp</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="movie_details_vote_average_text">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/full_white</item>
+        <item name="android:textSize">46sp</item>
+        <item name="android:shadowColor">@color/full_black</item>
+        <item name="android:shadowDx">1</item>
+        <item name="android:shadowDy">1</item>
+        <item name="android:shadowRadius">2</item>
+    </style>
+
+    <style name="movie_details_vote_total_text">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/full_white</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:layout_gravity">right</item>
+        <item name="android:shadowColor">@color/full_black</item>
+        <item name="android:shadowDx">1</item>
+        <item name="android:shadowDy">1</item>
+        <item name="android:shadowRadius">2</item>
+    </style>
+
+    <style name="movie_details_section_heading">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/light_gray</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:paddingRight">16dp</item>
+    </style>
+
+    <style name="movie_details_content_heading_text">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/light_gray</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_marginRight">8dp</item>
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:paddingRight">16dp</item>
+    </style>
+
+    <style name="movie_details_content_text">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/full_black</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:paddingRight">16dp</item>
+    </style>
+
+    <style name="movie_details_review_container">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="movie_details_review_separator">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:layout_marginLeft">16dp</item>
+        <item name="android:layout_marginRight">16dp</item>
+        <item name="android:background">@color/translucent_gray</item>
+        <item name="android:layout_marginTop">16dp</item>
+        <item name="android:layout_marginBottom">16dp</item>
+    </style>
+
+    <style name="movie_details_review_more_button">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/clear_button_text</item>
+        <item name="android:layout_marginRight">16dp</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:text">@string/movie_details_review_more_button</item>
+        <item name="android:clickable">true</item>
+    </style>
+
+    <style name="movie_reviews_author_text" parent="movie_details_content_heading_text">
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">14dp</item>
+    </style>
+
+    <style name="movie_reviews_content_text" parent="movie_details_content_text">
+        <item name="android:textStyle">italic</item>
+        <item name="android:layout_marginTop">8dp</item>
+    </style>
+
+
+    <!-- Dimensions -->
+    <dimen name="movie_details_app_bar_height_large">280dp</dimen>
+    <dimen name="movie_details_app_bar_height_medium">200dp</dimen>
+    <dimen name="movie_details_app_bar_height_small">170dp</dimen>
+
+    <!--
+    Note this property is overridden for smaller height
+    screens in landscape
+    -->
+    <dimen name="movie_details_app_bar_height">@dimen/movie_details_app_bar_height_large</dimen>
+
+    <!-- Colours -->
+    <!--
+    Note this property is overridden for large devices
+    -->
+    <color name="movie_details_toolbar_scrim_colour">@color/app_primary_colour</color>
+</resources>

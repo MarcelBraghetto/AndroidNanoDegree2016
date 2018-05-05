@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="home_title_daily_deviations">Daily Deviations</string>
+    <string name="home_title_favourites">My Deviations</string>
+
+    <!-- Styles -->
+    <style name="home_coordinator_layout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+</resources>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/details_root_view"
+    >
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <android.support.design.widget.AppBarLayout
+            style="@style/AppBarLayout"
+            >
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/details_toolbar"
+                style="@style/AppToolbar"
+                />
+        </android.support.design.widget.AppBarLayout>
+
+        <ImageView
+            tools:ignore="UnusedAttribute"
+            android:id="@+id/detail_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitCenter"
+            android:transitionName="@string/artwork_transition_name"
+            />
+    </LinearLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/details_floating_action_button"
+        style="@style/details_floating_action_button"
+        />
+
+</android.support.design.widget.CoordinatorLayout>

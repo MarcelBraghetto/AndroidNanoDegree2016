@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/thumbnail_viewer_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:padding="16dp"
+    >
+
+    <TextView
+        android:id="@+id/thumbnail_viewer_status"
+        style="@style/AppMediumText"
+        android:text="@string/thumbnail_viewer_status_loading"
+        android:textColor="@color/secondary_text"
+        android:layout_centerInParent="true"
+        />
+
+    <ImageView
+        android:id="@+id/thumbnail_viewer_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitCenter"
+        android:contentDescription="@string/book_details_thumbnail_description"
+        />
+
+</RelativeLayout>

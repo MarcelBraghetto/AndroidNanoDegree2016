@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="pref_base_url_title">Server Base Url</string>
+    <string name="pref_base_url_key">server_base_url</string>
+    <string name="pref_base_url_default">10.0.2.2</string>
+    <string name="pref_base_url_summary">Tap to edit.\n\nSet to \'10.0.2.0\' for an Android emulator.\n\nSet to \'localhost\' for a real device and use a USB cord, along with Chrome developer tools for port forwarding (search for Android Chrome USB debugging for instructions).</string>
+</resources>

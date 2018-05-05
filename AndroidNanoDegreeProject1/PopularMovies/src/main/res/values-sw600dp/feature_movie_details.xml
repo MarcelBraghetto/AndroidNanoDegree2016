@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="movie_details_activity_theme" parent="movie_details_activity_theme_base">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowCloseOnTouchOutside" tools:targetApi="honeycomb">true</item>
+    </style>
+</resources>

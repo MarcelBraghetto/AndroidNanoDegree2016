@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/movies_collection_item_root_view"
+    style="@style/movies_collection_item_background"
+    >
+
+        <ImageView
+            android:id="@+id/movies_collection_item_poster"
+            style="@style/movies_collection_item_poster"
+            android:contentDescription="@string/movies_collection_item_poster_content_description"
+            />
+
+        <TextView
+            android:id="@+id/movies_collection_item_rank_text"
+            style="@style/movies_collection_item_rank_text"
+            />
+
+        <!--
+        Helper view to make tapping the 'favourite' star much easier and
+        prevent accidental movie opening taps.
+        -->
+        <View
+            android:id="@+id/movies_collection_item_favourites_button"
+            style="@style/movies_collection_item_favourites_button"
+            />
+
+        <ImageView
+            android:id="@+id/movies_collection_item_favourites_icon"
+            style="@style/movies_collection_item_favourites_icon"
+            android:contentDescription="@string/movies_collection_item_favourites_icon_content_description"
+            />
+</RelativeLayout>

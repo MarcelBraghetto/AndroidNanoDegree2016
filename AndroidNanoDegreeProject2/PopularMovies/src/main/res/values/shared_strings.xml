@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Marcel\'s Movies!</string>
+
+    <string name="word_favourite">favourite</string>
+    <string name="word_favourites">favourites</string>
+
+    <string name="favourite_added_message">%1$s added to your %2$s.</string>
+    <string name="favourite_removed_message">%1$s removed from your %2$s.</string>
+
+</resources>

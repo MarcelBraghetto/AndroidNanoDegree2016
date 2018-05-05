@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    package="io.github.marcelbraghetto.alexandria"
+    >
+
+    <uses-feature android:name="android.hardware.camera" android:required="false" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/app_icon"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:fullBackupContent="false"
+        android:name=".framework.application.MainApp"
+        >
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version"
+            />
+
+        <meta-data
+            android:name="com.google.android.gms.vision.DEPENDENCIES"
+            android:value="barcode"
+            />
+
+        <activity
+            android:name=".features.home.ui.HomeActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan|adjustNothing"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".features.scanner.ui.ScannerActivity"
+            android:theme="@style/AppThemeFloating"
+            />
+
+        <activity
+            android:name=".features.thumbnailviewer.ui.ThumbnailViewerActivity"
+            android:theme="@style/AppThemeFloating"
+            />
+
+        <provider
+            android:name=".framework.providers.books.database.BooksDatabaseProvider"
+            android:authorities="io.github.marcelbraghetto.alexandria.framework.providers.books.database.BooksContentProvider"
+            android:exported="false"
+            />
+    </application>
+</manifest>

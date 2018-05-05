@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Pressed -->
+    <item
+        android:state_pressed="true"
+        >
+        <shape>
+            <solid
+                android:color="@color/home_button_default_on"
+                />
+        </shape>
+    </item>
+
+    <!-- Default -->
+    <item>
+        <shape>
+            <solid
+                android:color="@color/home_button_default_off"
+                />
+        </shape>
+    </item>
+
+</selector>

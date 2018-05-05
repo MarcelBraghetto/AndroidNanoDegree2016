@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="movies_collection_item_favourites_icon_content_description">Favourite icon.</string>
+    <string name="movies_collection_item_poster_content_description">Movie poster image.</string>
+    <string name="movies_collection_request_failed_message">Connection problem. Check your data connection and swipe down to try again.</string>
+
+    <!-- Styles -->
+    <style name="movies_collection_item_background">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/movies_collection_item_background</item>
+    </style>
+
+    <style name="movies_collection_item_poster">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:scaleType">centerCrop</item>
+    </style>
+
+    <style name="movies_collection_item_rank_text">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/full_white</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:layout_marginTop">2dp</item>
+        <item name="android:shadowColor">@color/full_black</item>
+        <item name="android:shadowDx">1</item>
+        <item name="android:shadowDy">1</item>
+        <item name="android:shadowRadius">2</item>
+    </style>
+
+    <style name="movies_collection_item_favourites_button">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">50dp</item>
+    </style>
+
+    <style name="movies_collection_item_favourites_icon">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_marginRight">6dp</item>
+        <item name="android:layout_marginTop">6dp</item>
+    </style>
+
+    <!-- Dimensions -->
+    <dimen name="movies_collection_item_poster_width">140dp</dimen> <!-- Original image source is 185px wide -->
+    <dimen name="movies_collection_item_poster_height">210dp</dimen> <!-- Original image source is 277px high -->
+</resources>

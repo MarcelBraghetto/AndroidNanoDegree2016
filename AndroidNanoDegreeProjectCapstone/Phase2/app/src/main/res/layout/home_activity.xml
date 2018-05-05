@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="viewModel"
+            type="io.github.marcelbraghetto.dailydeviations.features.home.logic.HomeViewModel"
+            />
+    </data>
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:openDrawer="start"
+        >
+
+        <android.support.design.widget.CoordinatorLayout
+            android:id="@+id/home_coordinator_layout"
+            style="@style/HomeCoordinatorLayout"
+            >
+
+            <android.support.design.widget.AppBarLayout
+                style="@style/AppBarLayout"
+                >
+
+                <android.support.v7.widget.Toolbar
+                    android:id="@+id/home_toolbar"
+                    app:title="@{viewModel.glue.navigationTitle}"
+                    style="@style/AppToolbar"
+                    />
+
+            </android.support.design.widget.AppBarLayout>
+
+            <FrameLayout
+                android:id="@+id/home_content_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                />
+
+        </android.support.design.widget.CoordinatorLayout>
+
+        <android.support.design.widget.NavigationView
+            android:id="@+id/nav_view"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            app:headerLayout="@layout/home_nav_header"
+            app:menu="@menu/nav_menu"
+            app:itemTextColor="#fff"
+            app:itemIconTint="#fff"
+            app:checkedItem="@{viewModel.glue.selectedMenuId}"
+            />
+
+    </android.support.v4.widget.DrawerLayout>
+</layout>

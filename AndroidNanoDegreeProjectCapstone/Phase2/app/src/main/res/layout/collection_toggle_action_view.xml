@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+    <data>
+        <variable
+            name="viewModel"
+            type="io.github.marcelbraghetto.dailydeviations.features.collection.ui.CollectionToggleActionView"
+            />
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/grid_mode_button"
+        android:layout_width="50dp"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
+        app:onClickListener="@{() -> viewModel.handleButtonClick()}"
+        >
+
+        <ImageView
+            android:id="@+id/grid_mode_icon_multi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_mode_single"
+            android:layout_centerInParent="true"
+            android:alpha="@{viewModel.glue.iconMultiAlpha}"
+            />
+
+        <ImageView
+            android:id="@+id/grid_mode_icon_single"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_mode_multi"
+            android:layout_centerInParent="true"
+            android:alpha="@{viewModel.glue.iconSingleAlpha}"
+            />
+
+    </RelativeLayout>
+</layout>

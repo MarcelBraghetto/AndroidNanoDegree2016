@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="viewHolder"
+            type="io.github.marcelbraghetto.dailydeviations.features.collection.ui.CollectionAdapter.CollectionViewHolder"
+            />
+    </data>
+
+    <android.support.v7.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_margin="4dp"
+        app:cardElevation="3dp"
+        app:cardCornerRadius="4dp"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <io.github.marcelbraghetto.dailydeviations.features.collection.ui.CollectionImageView
+                    tools:ignore="UnusedAttribute"
+                    android:id="@+id/collection_item_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scaleType="fitXY"
+                    android:transitionName="@string/artwork_transition_name"
+                    app:onClickListener="@{() -> viewHolder.imageClicked()}"
+                    />
+
+                <ImageView
+                    android:id="@+id/collection_item_favourite_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginStart="4dp"
+                    android:src="@{viewHolder.glue.isFavourite ? @drawable/icon_favourite_on : @drawable/icon_favourite_off}"
+                    app:onClickListener="@{() -> viewHolder.toggleFavouriteClicked()}"
+                    />
+
+            </RelativeLayout>
+
+            <FrameLayout
+                android:id="@+id/collection_item_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="12dp"
+                >
+
+                <TextView
+                    android:id="@+id/collection_item_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:textColor="@color/primary"
+                    android:text="@{viewHolder.glue.title}"
+                    />
+
+            </FrameLayout>
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+</layout>

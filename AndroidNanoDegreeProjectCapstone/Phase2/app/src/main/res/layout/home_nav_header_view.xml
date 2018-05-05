@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="viewModel"
+            type="io.github.marcelbraghetto.dailydeviations.features.home.logic.HomeNavHeaderViewModel"
+            />
+    </data>
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/primary"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark"
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/logo_big"
+            android:layout_centerInParent="true"
+            android:contentDescription="@null"
+            app:animatedVisibility="@{ viewModel.glue.loadingIndicatorVisible }"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="32dp"
+            android:layout_centerInParent="true"
+            android:text="@string/home_nav_header_load_failed"
+            android:textSize="14sp"
+            android:textColor="#fff"
+            android:visibility="@{ viewModel.glue.loadImageFailedVisible }"
+            />
+
+        <ImageView
+            android:id="@+id/nav_header_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@null"
+            android:scaleType="centerCrop"
+            />
+
+        <FrameLayout
+            android:id="@+id/nav_header_lock_button"
+            style="@style/HomeHeaderViewButtonLeft"
+            android:contentDescription="@string/home_nav_header_lock_button_content_description"
+            android:layout_marginTop="@dimen/nav_header_padding_top"
+            app:onClickListener="@{ () -> viewModel.lockImageButtonSelected() }"
+            >
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:contentDescription="@null"
+                app:imageResource="@{ viewModel.glue.lockIconResourceId }"
+                />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/nav_header_random_button"
+            style="@style/HomeHeaderViewButtonRight"
+            android:contentDescription="@string/home_nav_header_random_button_content_description"
+            android:layout_marginTop="@dimen/nav_header_padding_top"
+            app:onClickListener="@{ () -> viewModel.randomImageButtonSelected() }"
+            >
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/icon_random"
+                android:contentDescription="@null"
+                />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/nav_header_details_button"
+            style="@style/HomeHeaderViewButtonRight"
+            android:contentDescription="@string/home_nav_header_details_button_content_description"
+            android:layout_marginTop="8dp"
+            android:layout_below="@id/nav_header_random_button"
+            android:visibility="@{ viewModel.glue.detailsButtonVisible }"
+            app:onClickListener="@{ () -> viewModel.imageDetailsButtonSelected() }"
+            >
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/icon_forward"
+                android:contentDescription="@null"
+                />
+        </FrameLayout>
+
+    </RelativeLayout>
+</layout>

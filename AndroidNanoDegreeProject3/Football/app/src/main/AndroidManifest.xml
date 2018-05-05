@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    package="io.github.marcelbraghetto.football"
+    >
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/app_icon"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:fullBackupContent="false"
+        android:name="io.github.marcelbraghetto.football.framework.application.MainApp"
+        >
+
+        <activity
+            android:name="io.github.marcelbraghetto.football.features.home.ui.HomeActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan|adjustNothing"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <!-- Register to be notified if the device has booted up again -->
+        <receiver
+            android:name=".framework.application.receivers.BootupBroadcastReceiver"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <!-- Register to be notified when any of our alarms have triggered -->
+        <receiver
+            android:name=".framework.application.receivers.AlarmBroadcastReceiver"
+            />
+
+        <!-- Database provider used as the data source throughout the app -->
+        <provider
+            android:name=".framework.providers.football.database.FootballDatabaseProvider"
+            android:authorities="io.github.marcelbraghetto.football.framework.providers.football.database.FootballContentProvider"
+            android:exported="false"
+            />
+
+        <!-- Our worker service responsible for fetching data to update the scores -->
+        <service
+            android:name=".framework.providers.football.service.FootballDataService"
+            android:exported="false"
+            />
+
+        <!--
+        This is our Android widget, which will only be available
+        on devices with at least Honeycomb or later.
+        -->
+        <receiver
+            android:name=".features.widget.FootballWidgetProvider"
+            android:enabled="@bool/atLeastHoneycomb"
+            >
+
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="io.github.marcelbraghetto.football.features.widget.UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/football_widget_info"
+                />
+        </receiver>
+
+        <!-- Our Android widget service -->
+        <service
+            android:name=".features.widget.FootballWidgetService"
+            android:permission="android.permission.BIND_REMOTEVIEWS"
+            android:exported="false"
+            />
+
+    </application>
+</manifest>

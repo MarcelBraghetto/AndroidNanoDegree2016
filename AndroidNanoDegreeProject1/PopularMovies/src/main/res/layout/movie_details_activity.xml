@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/movie_details_root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <android.support.design.widget.AppBarLayout
+        style="@style/movie_details_app_bar"
+        >
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/movie_details_collapsing_toolbar_layout"
+            style="@style/movie_details_toolbar_layout"
+            >
+
+            <RelativeLayout
+                style="@style/movie_details_header_layout"
+                >
+
+                <FrameLayout
+                    android:id="@+id/movie_details_header_progress_indicator_container"
+                    style="@style/movie_details_header_progress_indicator_container"
+                    >
+                    <ProgressBar
+                        android:id="@+id/movie_details_header_progress_indicator"
+                        style="@style/movie_details_header_progress_indicator"
+                        />
+                </FrameLayout>
+
+                <ImageView
+                    android:id="@+id/movie_details_header_image_failed_icon"
+                    style="@style/movie_details_header_image_load_failed_icon"
+                    android:contentDescription="@string/movie_details_header_image_load_failed_icon_content_description"
+                    />
+
+                <ImageView
+                    android:id="@+id/movie_details_header_image"
+                    style="@style/movie_details_header_image"
+                    android:contentDescription="@string/movie_details_header_image_content_description"
+                    />
+
+                <ImageView
+                    style="@style/movie_details_header_scrim"
+                    android:contentDescription="@string/movie_details_header_scrim_content_description"
+                    />
+
+                <LinearLayout
+                    android:id="@+id/movie_details_vote_container"
+                    style="@style/movie_details_vote_container"
+                    >
+
+                    <TextView
+                        android:id="@+id/movie_details_vote_average_text"
+                        style="@style/movie_details_vote_average_text"
+                        />
+
+                    <TextView
+                        android:id="@+id/movie_details_vote_total_text"
+                        style="@style/movie_details_vote_total_text"
+                        />
+
+                </LinearLayout>
+            </RelativeLayout>
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/movie_details_toolbar"
+                style="@style/movie_details_toolbar"
+                />
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        style="@style/movie_details_content_scrollview"
+        >
+
+        <LinearLayout
+            style="@style/movie_details_content_container"
+            >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:id="@+id/movie_details_release_date_label"
+                    style="@style/movie_details_content_heading_text"
+                    android:text="@string/movie_details_released"
+                    />
+
+                <TextView
+                    android:id="@+id/movie_details_release_date_text"
+                    style="@style/movie_details_content_text"
+                    />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/movie_details_overview_text"
+                style="@style/movie_details_content_text"
+                android:layout_marginTop="10dp"
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                />
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/movie_details_floating_action_button"
+        style="@style/movie_details_floating_action_button"
+        />
+
+</android.support.design.widget.CoordinatorLayout>

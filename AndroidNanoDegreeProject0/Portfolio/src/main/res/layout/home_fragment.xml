@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/home_root_container"
+    >
+    <LinearLayout
+        style="@style/home_button_container"
+        >
+
+        <TextView
+            android:id="@+id/home_content_title"
+            style="@style/home_content_title"
+            />
+
+        <Button
+            android:id="@+id/home_spotify_streamer_button"
+            style="@style/home_button_default"
+            android:text="@string/home_spotify_streamer_button"
+            />
+
+        <Button
+            android:id="@+id/home_scores_app_button"
+            style="@style/home_button_default"
+            android:text="@string/home_super_duo_scores_button"
+            />
+
+        <Button
+            android:id="@+id/home_library_app_button"
+            style="@style/home_button_default"
+            android:text="@string/home_super_duo_library_button"
+            />
+
+        <Button
+            android:id="@+id/home_build_it_bigger_button"
+            style="@style/home_button_default"
+            android:text="@string/home_build_it_bigger_button"
+            />
+
+        <Button
+            android:id="@+id/home_xyz_reader_button"
+            style="@style/home_button_default"
+            android:text="@string/home_xyz_reader_button"
+            />
+
+        <Button
+            android:id="@+id/home_capstone_button"
+            style="@style/home_button_important"
+            android:text="@string/home_capstone_button"
+            />
+
+    </LinearLayout>
+</ScrollView>

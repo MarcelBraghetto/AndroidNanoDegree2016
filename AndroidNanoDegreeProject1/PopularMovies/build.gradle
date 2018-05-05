@@ -1,0 +1,116 @@
+apply plugin: 'com.android.application'
+
+// APT processor plugin (to help Dagger): https://bitbucket.org/hvisser/android-apt
+apply plugin: 'com.neenbedankt.android-apt'
+
+android {
+    compileSdkVersion 22
+    buildToolsVersion "22.0.1"
+
+    defaultConfig {
+        applicationId "com.lilarcor.popularmovies"
+        minSdkVersion 9
+        targetSdkVersion 22
+        versionCode 1
+        versionName "1.0"
+
+        // You might notice that the instrumentation runner is a custom one. The reason for this
+        // is that when running the automated UI tests via Espresso, we want to configure a
+        // different Dagger mapping to the normal app. For example, when sending network requests
+        // we want the Espresso tests to not actually connect to the network at all, but rather
+        // return pre defined canned responses. This is achieved by using a custom runner which
+        // overrides the main application class to load when starting the tests - in this case
+        // to an 'EspressoMainApp' implementation.
+        testInstrumentationRunner "com.lilarcor.popularmovies.testhelpers.CustomEspressoRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    packagingOptions {
+        exclude 'LICENSE.txt'
+    }
+}
+
+dependencies {
+    //region Application dependencies
+
+    compile 'com.android.support:appcompat-v7:22.2.0'
+    compile 'com.android.support:recyclerview-v7:22.2.0'
+    compile 'com.android.support:design:22.2.0'
+
+    // Dagger: http://google.github.io/dagger/
+    provided 'javax.annotation:javax.annotation-api:1.2'
+    apt 'com.google.dagger:dagger-compiler:2.0.1'
+    compile 'com.google.dagger:dagger:2.0.1'
+
+    // Butterknife: http://jakewharton.github.io/butterknife/
+    compile 'com.jakewharton:butterknife:7.0.1'
+
+    // Picasso: http://square.github.io/picasso/
+    compile 'com.squareup.picasso:picasso:2.5.2'
+
+    // Otto: http://square.github.io/otto/
+    compile 'com.squareup:otto:1.3.8'
+
+    // OkHttp: http://square.github.io/okhttp/
+    compile 'com.squareup.okhttp:okhttp:2.4.0'
+    compile 'com.squareup.okhttp:okhttp-urlconnection:2.4.0'
+
+    // OkIO: https://github.com/square/okio
+    compile 'com.squareup.okio:okio:1.5.0'
+
+    // Gson: https://github.com/google/gson
+    compile 'com.google.code.gson:gson:2.3.1'
+
+    //endregion
+
+    //region Unit testing dependencies
+    // Robolectric: http://robolectric.org/
+    testCompile 'org.robolectric:robolectric:3.0'
+
+    // Mockito: https://github.com/mockito/mockito
+    testCompile 'org.mockito:mockito-core:1.10.19'
+
+    //endregion
+
+    //region Automated UI testing dependencies
+
+    // Espresso: https://code.google.com/p/android-test-kit/wiki/Espresso
+    androidTestCompile 'com.android.support.test.espresso:espresso-core:2.2'
+    androidTestCompile 'com.android.support.test:runner:0.3'
+    androidTestCompile('com.android.support.test.espresso:espresso-contrib:2.2') {
+        exclude group: 'com.android.support', module: 'appcompat'
+        exclude group: 'com.android.support', module: 'support-v4'
+        exclude module: 'recyclerview-v7'
+    }
+
+    //endregion
+}
+
+// Unfortunately the default behaviour when running JUnit tests
+// is that no resource files that sit along side the java source
+// classes are copied into the output directory. This means that
+// attempting to load text files etc inside a JUnit test will fail
+// because the text files won't have been copied across to the
+// generated output directory when compiling the tests.
+task copyUnitTestResources(type: Copy) {
+    from "${projectDir}/src/test/java"
+    into "${buildDir}/intermediates/classes/test/debug"
+    include '**/*.txt'
+}
+
+task clearUnitTestClasses(type: Delete) {
+    delete "${buildDir}/intermediates/classes/test/debug"
+}
+
+project.afterEvaluate {
+    // Unit tests
+    assembleDebugUnitTest.dependsOn(cleanTest)
+    cleanTest.dependsOn(clearUnitTestClasses)
+    testDebug.dependsOn(copyUnitTestResources)
+}

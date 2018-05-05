@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">Football Scores Redux</string>
+
+    <string name="ok">OK</string>
+
+    <!-- Navigation Menu -->
+    <string name="home_nav_header_title">@string/app_name</string>
+    <string name="home_nav_drawer_open">Open navigation drawer</string>
+    <string name="home_nav_drawer_close">Close navigation drawer</string>
+    <string name="home_nav_menu_football_scores">Football Scores</string>
+    <string name="home_nav_menu_about">About this App</string>
+
+    <!-- Football Scores -->
+    <string name="scores_list_item_share">Share</string>
+    <string name="scores_list_item_share_message_game_over">%1$s %2$d - %3$d %4$s</string>
+    <string name="scores_list_item_share_message_game_pending">%1$s plays %2$s at %3$s</string>
+    <string name="scores_list_item_goals">%1$d - %2$d</string>
+    <string name="scores_no_results">Results not ready yet.</string>
+    <string name="scores_refresh_in_progress">Scores are refreshing ...</string>
+
+    <!-- About -->
+    <string name="about_screen_title">About this app</string>
+
+    <!-- Dates -->
+    <string name="today">Today</string>
+    <string name="yesterday">Yesterday</string>
+    <string name="tomorrow">Tomorrow</string>
+    <string name="monday">Monday</string>
+    <string name="tuesday">Tuesday</string>
+    <string name="wednesday">Wednesday</string>
+    <string name="thursday">Thursday</string>
+    <string name="friday">Friday</string>
+    <string name="saturday">Saturday</string>
+    <string name="sunday">Sunday</string>
+</resources>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="DisplayJokeQuestionText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">30sp</item>
+        <item name="android:textColor">#ffff00</item>
+        <item name="android:gravity">center_horizontal</item>
+    </style>
+
+    <style name="DisplayJokeAnswerText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">#fff</item>
+        <item name="android:gravity">center_horizontal</item>
+    </style>
+
+    <dimen name="display_joke_window_width">260dp</dimen>
+    <dimen name="display_joke_window_height">280dp</dimen>
+</resources>

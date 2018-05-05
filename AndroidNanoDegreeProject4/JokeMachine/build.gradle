@@ -1,0 +1,40 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.2"
+
+    defaultConfig {
+        applicationId "io.github.marcelbraghetto.jokes"
+        minSdkVersion 10
+        targetSdkVersion 23
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    productFlavors {
+        free {
+            applicationId 'io.github.marcelbraghetto.jokes.free'
+            versionCode 1
+            versionName "1.0"
+        }
+
+        paid {
+            applicationId 'io.github.marcelbraghetto.jokes.paid'
+            versionCode 1
+            versionName '1.0'
+        }
+    }
+}
+
+dependencies {
+    // Dependencies specific to the 'free' version
+    freeCompile 'com.google.android.gms:play-services-ads:8.4.0'
+
+    compile project(':LibAndroid')
+}

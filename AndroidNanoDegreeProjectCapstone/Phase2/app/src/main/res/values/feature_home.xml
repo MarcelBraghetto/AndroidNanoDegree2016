@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:targetApi="jelly_bean_mr1"
+    >
+    <!-- Strings -->
+    <string name="nav_menu_drawer_open">Open navigation drawer</string>
+    <string name="nav_menu_drawer_close">Close navigation drawer</string>
+    <string name="nav_menu_browse">Browse</string>
+    <string name="nav_menu_favourites">My Deviations</string>
+    <string name="nav_menu_share_app">Tell your friends!</string>
+    <string name="nav_menu_rate_app">Rate app</string>
+    <string name="nav_menu_settings">Settings</string>
+    <string name="nav_menu_about">About</string>
+
+    <string name="app_invite_title">Daily Deviations App!</string>
+    <string name="app_invite_message">Keep up to date with the Daily Deviations app.</string>
+    <string name="app_invite_call_to_action">Get the app!</string>
+
+    <string name="home_nav_header_lock_button_content_description">Lock this image</string>
+    <string name="home_nav_header_random_button_content_description">Pick random image</string>
+    <string name="home_nav_header_details_button_content_description">View image details</string>
+    <string name="home_nav_header_load_failed">Image not available. Check your connection.</string>
+
+    <!-- Styles -->
+    <style name="HomeCoordinatorLayoutBase">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="HomeCoordinatorLayout" parent="HomeCoordinatorLayoutBase">
+        <!-- Nothing extra by default -->
+    </style>
+
+    <style name="HomeHeaderViewButton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">6dp</item>
+        <item name="android:background">@drawable/header_view_button</item>
+        <item name="android:clickable">true</item>
+    </style>
+
+    <style name="HomeHeaderViewButtonLeft" parent="HomeHeaderViewButton">
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:layout_marginStart">10dp</item>
+    </style>
+
+    <style name="HomeHeaderViewButtonRight" parent="HomeHeaderViewButton">
+        <item name="android:layout_marginRight">10dp</item>
+        <item name="android:layout_marginEnd">10dp</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_alignParentEnd">true</item>
+    </style>
+
+    <!-- Dimens -->
+    <dimen name="nav_header_padding_top">8dp</dimen> <!-- Overridden in API 21 -->
+    <dimen name="nav_header_height">260dp</dimen>
+</resources>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="details_action_info">Info</string>
+    <string name="details_action_share">Share</string>
+    <string name="details_greeting_message">Pinch and zoom the image to explore it!</string>
+
+    <!--
+    %1$s = artwork name
+    -->
+    <string name="details_share_subject">Daily Deviations: %1$s</string>
+
+    <style name="details_floating_action_button">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">bottom|right</item>
+        <item name="android:layout_marginBottom">@dimen/fab_margin_bottom</item>
+        <item name="android:layout_marginRight">@dimen/fab_margin_right</item>
+        <item name="android:src">@drawable/icon_fab</item>
+        <item name="backgroundTint">#fff</item>
+        <item name="borderWidth">0dp</item>
+        <item name="fabSize">normal</item>
+    </style>
+
+</resources>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--
+    When viewed on a large device in landscape mode, select reasonable
+    activity window sizes for landscape.
+    -->
+    <dimen name="movie_details_app_bar_height">@dimen/movie_details_app_bar_height_medium</dimen>
+    <dimen name="movie_details_floating_window_width">600dp</dimen>
+    <dimen name="movie_details_floating_window_height">450dp</dimen>
+</resources>

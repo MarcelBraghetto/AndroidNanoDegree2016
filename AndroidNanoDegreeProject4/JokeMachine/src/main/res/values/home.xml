@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="home_joke_button_content_description">Tell me a joke button</string>
+    <string name="home_settings_button_content_description">Settings</string>
+    <string name="home_network_failure">Unable to fetch joke. Check your network connection and try again.</string>
+
+    <style name="HomeRootContainer">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@drawable/background</item>
+    </style>
+
+    <style name="HomeContentContainer">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+</resources>

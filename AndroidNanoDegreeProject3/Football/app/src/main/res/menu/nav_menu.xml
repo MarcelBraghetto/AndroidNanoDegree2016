@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group
+        android:id="@+id/nav_menu_group_primary"
+        android:checkableBehavior="single"
+        >
+        <item
+            android:id="@+id/nav_menu_football_scores"
+            android:icon="@drawable/icon_calendar"
+            android:title="@string/home_nav_menu_football_scores"
+            />
+    </group>
+
+    <group
+        android:id="@+id/nav_menu_group_secondary"
+        android:checkableBehavior="single"
+        >
+        <item
+            android:id="@+id/nav_menu_about"
+            android:icon="@drawable/icon_info"
+            android:title="@string/home_nav_menu_about"
+            />
+    </group>
+</menu>

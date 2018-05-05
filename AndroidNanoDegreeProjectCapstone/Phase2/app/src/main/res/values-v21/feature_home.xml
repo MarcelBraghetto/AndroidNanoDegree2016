@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="HomeCoordinatorLayout" parent="HomeCoordinatorLayoutBase">
+        <item name="android:paddingTop">@dimen/navigation_padding_top</item>
+    </style>
+
+    <dimen name="nav_header_padding_top">34dp</dimen>
+</resources>

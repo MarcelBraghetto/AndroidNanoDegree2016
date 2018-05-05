@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <RelativeLayout
+        android:id="@+id/home_widget_header_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:background="@color/primary"
+        >
+
+        <ImageView
+            android:id="@+id/header_icon"
+            android:src="@drawable/app_icon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:padding="6dp"
+            android:scaleType="fitCenter"
+            android:contentDescription="@null"
+            />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_toRightOf="@id/header_icon"
+            android:layout_toEndOf="@id/header_icon"
+            android:layout_centerVertical="true"
+            >
+
+            <TextView
+                style="@style/AppMediumText"
+                android:text="@string/app_name"
+                android:textColor="#fff"
+                android:textStyle="bold"
+                android:textSize="15dp"
+                />
+
+            <TextView
+                android:id="@+id/home_widget_subtitle"
+                style="@style/AppMediumText"
+                android:text="..."
+                android:textColor="#fff"
+                android:textSize="11dp"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            >
+
+            <FrameLayout
+                android:id="@+id/home_widget_wallpaper_button"
+                style="@style/HomeHeaderViewButtonRight"
+                android:contentDescription="@string/HomeWidgetWallpaperContentDescription"
+                >
+
+                <ImageView
+                    style="@style/HomeWidgetButtonImage"
+                    android:src="@drawable/icon_wallpaper"
+                    />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/home_widget_refresh_button"
+                style="@style/HomeHeaderViewButtonRight"
+                android:contentDescription="@string/HomeWidgetRefreshContentDescription"
+                >
+
+                <ImageView
+                    style="@style/HomeWidgetButtonImage"
+                    android:src="@drawable/icon_random"
+                    />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/home_widget_open_app_button"
+                style="@style/HomeHeaderViewButtonRight"
+                android:contentDescription="@string/HomeWidgetOpenAppContentDescription"
+                >
+
+                <ImageView
+                    style="@style/HomeWidgetButtonImage"
+                    android:src="@drawable/icon_forward"
+                    />
+            </FrameLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#fff"
+        >
+
+        <ListView
+            android:id="@+id/home_widget_list_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@color/HomeWidgetListDivider"
+            android:dividerHeight="0.5dp"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+            android:clipToPadding="false"
+            />
+
+        <TextView
+            android:id="@+id/home_widget_empty_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:visibility="gone"
+            android:textColor="#ffffff"
+            android:text="EMPTY VIEW"
+            android:textSize="20sp"
+            />
+    </FrameLayout>
+</LinearLayout>

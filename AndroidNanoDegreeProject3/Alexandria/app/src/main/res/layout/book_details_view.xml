@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <Button
+            android:id="@+id/book_details_button"
+            style="@style/AppButton"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            />
+
+        <TextView
+            android:id="@+id/book_details_title"
+            style="@style/AppLargeText"
+            android:layout_width="match_parent"
+            android:textStyle="bold"
+            android:layout_marginRight="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_toLeftOf="@id/book_details_button"
+            android:layout_toStartOf="@id/book_details_button"
+            android:layout_centerVertical="true"
+            />
+    </RelativeLayout>
+
+    <View
+        style="@style/SimpleDividerLine"
+        android:layout_marginBottom="16dp"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <RelativeLayout
+            android:id="@+id/book_details_thumbnail_container"
+            android:layout_width="@dimen/my_books_list_item_thumbnail_width"
+            android:layout_height="@dimen/my_books_list_item_thumbnail_height"
+            android:layout_marginRight="16dp"
+            android:layout_marginEnd="16dp"
+            android:padding="1dp"
+            android:background="@drawable/thumbnail_container_background"
+            >
+
+            <ImageView
+                android:id="@+id/book_details_thumbnail"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitCenter"
+                android:contentDescription="@string/book_details_thumbnail_description"
+                />
+
+            <FrameLayout
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:background="#80000000"
+                >
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/icon_search"
+                    android:contentDescription="@null"
+                    />
+            </FrameLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_toRightOf="@id/book_details_thumbnail_container"
+            android:layout_toEndOf="@id/book_details_thumbnail_container"
+            android:layout_alignWithParentIfMissing="true"
+            >
+
+            <android.support.v7.widget.GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:columnCount="2"
+                app:alignmentMode="alignBounds"
+                >
+
+                <TextView
+                    style="@style/BookDetailsLabelText"
+                    android:text="@string/book_details_authors_label"
+                    />
+
+                <TextView
+                    android:id="@+id/book_details_authors"
+                    style="@style/BookDetailsGridText"
+                    />
+
+                <TextView
+                    style="@style/BookDetailsLabelText"
+                    android:text="@string/book_details_published_label"
+                    />
+
+                <TextView
+                    android:id="@+id/book_details_published"
+                    style="@style/BookDetailsGridText"
+                    />
+
+                <TextView
+                    style="@style/BookDetailsLabelText"
+                    android:text="@string/book_details_categories_label"
+                    />
+
+                <TextView
+                    android:id="@+id/book_details_categories"
+                    style="@style/BookDetailsGridText"
+                    />
+
+            </android.support.v7.widget.GridLayout>
+
+            <TextView
+                android:id="@+id/book_details_description"
+                style="@style/AppMediumText"
+                android:layout_marginTop="8dp"
+                />
+
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

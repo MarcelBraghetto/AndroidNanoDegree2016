@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="set_phone_wallpaper_widget_started">Updating wallpaper...</string>
+    <string name="set_phone_wallpaper_success">Wallpaper updated!</string>
+    <string name="set_phone_wallpaper_failed">Unable to set wallpaper</string>
+</resources>

@@ -1,0 +1,91 @@
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:1.5.0'
+        classpath 'com.neenbedankt.gradle.plugins:android-apt:1.8'
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+    }
+
+    // This is required to run the correct sequence of tasks
+    // in order to bring the server online, run the tests
+    // then shut down the server regardless of the result
+    // of the tests themselves.
+    tasks.addRule('runJokeMachineIntegrationTests: Start the local Google App Engine server, run tests and stop the local server.') { String taskName ->
+        if (taskName.equals('runJokeMachineIntegrationTests')) {
+            task(dependsOn: [executeJokeMachineTests], taskName)
+            executeJokeMachineTests.dependsOn startLocalServer
+            stopLocalServer.mustRunAfter executeJokeMachineTests
+            startLocalServer.finalizedBy stopLocalServer
+        }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+// This task will attempt to start the Google App Engine
+// local server as a background daemon. This is used when
+// running the integration test suite via the Gradle tasks
+// to start up the server before executing any test cases.
+task startLocalServer {
+    dependsOn ":LibServer:appengineRun"
+
+    // Without this clause, the Gradle script will appear to
+    // hang in the building phase as the server is started
+    // be not running as a daemon.
+    project(":LibServer").afterEvaluate { backend ->
+        backend.extensions.appengine.daemon = true
+    }
+
+    doFirst {
+        println "Integration tests: Starting local Google App Engine server ..."
+    }
+
+    doLast {
+        println "Integration tests: Local Google App Engine started ..."
+    }
+}
+
+// This task will attempt to stop the local Google App Engine server
+// and is used after running the integration test suite to shut down
+// the server.
+task stopLocalServer {
+    dependsOn ":LibServer:appengineStop"
+
+    doFirst {
+        println "Integration tests: Stopping local Google App Engine server ..."
+    }
+
+    doLast {
+        println "Integration tests: Local Google App Engine server stopped."
+    }
+}
+
+// Task to actually run the instrumented tests. Don't run this task explicity
+// unless you are manually starting/stopping the local Google App Engine server.
+task executeJokeMachineTests() {
+    dependsOn ":JokeMachine:connectedCheck"
+
+    doFirst {
+        println "Integration tests: Starting tests ..."
+    }
+
+    doLast {
+        println "Integration tests: Completed - check the JokeMachine/build/reports/androidTests/connected/flavors/* folders for test reports ..."
+    }
+}
+
+// Basic stub task to run to begin executing the integration tests.
+// There is a Gradle task rule which will catch this task and manipulate
+// its properties to inject the correct dependencies and order.
+//
+// This is the Gradle task to run if you want to execute the test suite.
+task runJokeMachineIntegrationTests { }

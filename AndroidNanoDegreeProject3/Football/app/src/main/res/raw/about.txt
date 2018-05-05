@@ -1,0 +1,20 @@
+App author: Marcel Braghetto
+
+This app was developed as part of the 2015 Udacity Android Nanodegree program.
+
+The assignment was to take an existing project (named Football Scores) and make it 'production ready'.
+
+I redeveloped the app from the ground up (I wasn't happy with some of the code in the sample app). Because I decided to start again from scratch, I named the app Football Scores Redux as it was 'born again'.
+
+The main points of interest in this app are:
+
+- Use of an IntentService coupled with an AlarmManager to keep the football scores up to date periodically.
+- Inclusion of an Android home screen widget to show the scores for today, which should sync with any updates caused by the IntentService.
+- Swipe to refresh in the app.
+- Overhaul of the UI.
+
+I also made a deliberate decision to NOT include any team badges, because the sample app only had a small handful of them and it looked really bad only seeing a team badge rarely in the list items.
+
+Overall I really enjoyed having the chance to play around with IntentServices, AlarmManagers, Widgets, Receivers etc and meshing them with a code design pattern I use quite often (all the *Controller classes, kind of an MVP pattern in a way).
+
+Peace!

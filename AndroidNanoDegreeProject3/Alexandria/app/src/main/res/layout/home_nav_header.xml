@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/nav_header_height"
+    android:background="@color/primary"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark"
+    >
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/header"
+        android:contentDescription="@null"
+        android:scaleType="centerCrop"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:padding="8dp"
+        android:background="#50000000"
+        >
+
+        <ImageView
+            android:id="@+id/nav_header_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/app_icon"
+            android:contentDescription="@null"
+            android:layout_marginRight="8dp"
+            android:layout_marginEnd="8dp"
+            />
+
+            <TextView
+                android:id="@+id/nav_header_title"
+                style="@style/AppLargeText"
+                android:textColor="#fff"
+                android:textStyle="bold"
+                android:text="@string/home_nav_header_title"
+                android:layout_toRightOf="@id/nav_header_image"
+                android:layout_toEndOf="@id/nav_header_image"
+                android:layout_centerVertical="true"
+                />
+    </RelativeLayout>
+</RelativeLayout>

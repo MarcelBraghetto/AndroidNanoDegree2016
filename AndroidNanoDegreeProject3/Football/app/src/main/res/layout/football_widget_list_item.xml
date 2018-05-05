@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widget_list_item_root_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="4dp"
+    android:paddingBottom="4dp"
+    android:paddingLeft="8dp"
+    android:paddingRight="8dp"
+    android:background="@color/primary_light"
+    >
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="8dp"
+    android:background="#fff"
+    >
+
+    <RelativeLayout
+        style="@style/ScoresListItemTeamNameContainer"
+        >
+
+        <TextView
+            android:id="@+id/widget_list_item_title_home"
+            style="@style/ScoresListItemTeamName"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+        >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:id="@+id/widget_list_item_score"
+                style="@style/AppLargeText"
+                android:layout_gravity="center"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:id="@+id/widget_list_item_time"
+                style="@style/AppMediumText"
+                android:textColor="@color/secondary_text"
+                android:layout_gravity="center"
+                />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        style="@style/ScoresListItemTeamNameContainer"
+        >
+        <TextView
+            android:id="@+id/widget_list_item_title_away"
+            style="@style/ScoresListItemTeamName"
+            />
+    </RelativeLayout>
+
+</LinearLayout>
+</FrameLayout>

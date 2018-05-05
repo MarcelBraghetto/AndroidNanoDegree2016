@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    style="@style/HomeRootContainer"
+    >
+
+    <RelativeLayout
+        style="@style/HomeContentContainer"
+        >
+        <include layout="@layout/home_activity_common" />
+    </RelativeLayout>
+</android.support.design.widget.CoordinatorLayout>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#fff"
+    android:keepScreenOn="true"
+    >
+
+    <TextView
+        android:id="@+id/scanner_instructions"
+        style="@style/AppMediumText"
+        android:textColor="@color/secondary_text"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:text="@string/scanner_instructions"
+        />
+
+    <io.github.marcelbraghetto.alexandria.features.scanner.ui.CameraSourcePreview
+        android:id="@+id/scanner_preview"
+        android:layout_marginTop="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/scanner_instructions"
+        />
+</RelativeLayout>

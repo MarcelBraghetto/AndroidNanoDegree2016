@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="SpUsage"
+    >
+
+    <color name="WatchFaceSubtitleText">#9cdffe</color>
+
+    <dimen name="WatchFaceLogoHeightSmall">12dp</dimen>
+    <dimen name="WatchFaceTimeTextSizeSmall">44dp</dimen>
+    <dimen name="WatchFaceDateTextSizeSmall">14dp</dimen>
+    <dimen name="WatchFaceTemperatureTextSizeSmall">18dp</dimen>
+    <dimen name="WatchFaceIconSizeSmall">24dp</dimen>
+
+    <dimen name="WatchFaceLogoHeightLarge">16dp</dimen>
+    <dimen name="WatchFaceTimeTextSizeLarge">54dp</dimen>
+    <dimen name="WatchFaceDateTextSizeLarge">18dp</dimen>
+    <dimen name="WatchFaceTemperatureTextSizeLarge">30dp</dimen>
+    <dimen name="WatchFaceIconSizeLarge">30dp</dimen>
+
+    <!-- Watch face: active -->
+    <style name="ActiveWatchFaceRoot" parent="WatchFaceRoot">
+        <item name="android:background">@color/primary</item>
+    </style>
+
+    <style name="ActiveWatchFaceTimeText" parent="WatchFaceTimeText">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="ActiveWatchFaceDateText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/WatchFaceDateTextSizeSmall</item>
+        <item name="android:textColor">@color/WatchFaceSubtitleText</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+    </style>
+
+    <style name="ActiveWatchFaceTemperatureText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/WatchFaceTemperatureTextSizeSmall</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="ActiveWatchFaceTemperatureText.Max">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="ActiveWatchFaceTemperatureText.Min">
+        <item name="android:textColor">@color/WatchFaceSubtitleText</item>
+    </style>
+
+    <!-- Watch face: ambient -->
+    <style name="AmbientWatchFaceRoot" parent="WatchFaceRoot">
+        <item name="android:background">@color/black</item>
+    </style>
+
+    <style name="AmbientWatchFaceTimeText" parent="WatchFaceTimeText">
+        <item name="android:textColor">@color/dark_grey</item>
+    </style>
+
+    <!-- Watch face: common -->
+    <style name="WatchFaceRoot">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="WatchFaceContentContainer">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+
+    <style name="WatchFaceTimeText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/WatchFaceTimeTextSizeSmall</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+    </style>
+
+</resources>

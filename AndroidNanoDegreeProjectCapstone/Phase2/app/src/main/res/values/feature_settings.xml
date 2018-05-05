@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="settings_option_background_data">Automatically fetch daily deviations in the background</string>
+    <string name="settings_option_background_data_enabled">Daily deviations will be fetched in the background</string>
+    <string name="settings_option_background_data_disabled">Daily deviations will not be fetched in the background</string>
+
+    <string name="settings_option_notifications">Show notifications when there are new daily deviations</string>
+    <string name="settings_option_notifications_enabled">Notifications will display for new daily deviations</string>
+    <string name="settings_option_notifications_disabled">Notifications will not display for new daily deviations</string>
+
+    <string name="settings_option_header_image">Automatically choose a random image in the menu each time the app starts</string>
+    <string name="settings_option_header_image_enabled">A random image will display in the menu on app start</string>
+    <string name="settings_option_header_image_disabled">The image in the menu will not change automatically</string>
+
+    <style name="SettingsOption" parent="@style/AppMediumText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:checkMark">@drawable/app_checkbox</item>
+        <item name="android:textColor">#fff</item>
+    </style>
+</resources>

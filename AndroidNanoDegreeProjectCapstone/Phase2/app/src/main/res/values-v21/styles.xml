@@ -1,0 +1,10 @@
+<resources>
+
+    <dimen name="navigation_padding_top">24dp</dimen>
+
+    <style name="AppTheme" parent="BaseAppTheme">
+        <item name="android:windowContentTransitions">true</item>
+        <item name="android:windowSharedElementsUseOverlay">false</item>
+        <item name="android:windowTranslucentStatus">true</item>
+    </style>
+</resources>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--
+    Obtain an API key from here to use this app:
+    http://api.football-data.org/index
+    -->
+    <string name="football_api_key">Put-Your-API-Key-Here</string>
+</resources>

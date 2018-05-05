@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="http://schemas.android.com/apk/res-auto">
+    <!-- Component configuration -->
+    <string name="sync_account_type">sunshinewatch.marcelbraghetto.github.io</string>
+    <string name="content_authority">io.github.marcelbraghetto.sunshinewatch</string>
+
+    <!-- General strings -->
+    <string name="app_name">Sunshine Watch</string>
+    <string name="empty_forecast_list">No Weather Information Available</string>
+</resources>
